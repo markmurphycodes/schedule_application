@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="commons-codec-1.14">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/lib/commons-codec-1.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/geoip2-2.14.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/httpclient-4.5.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/httpcore-4.4.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jackson-annotations-2.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jackson-core-2.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jackson-databind-2.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/maxmind-db-1.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/src/lib/geoip2-2.14.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/src/lib/geoip2-2.14.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

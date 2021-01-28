@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="652.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddAppointmentController">
+   <children>
+      <Button fx:id="exitButton" layoutX="388.0" layoutY="612.0" mnemonicParsing="false" onMouseClicked="#exitButtonAction" text="Cancel" />
+      <Button fx:id="saveChanges" layoutX="491.0" layoutY="612.0" mnemonicParsing="false" onMouseClicked="#saveChanges" text="Save" />
+      <Label fx:id="addAppointmentLabel" layoutX="136.0" layoutY="51.0" text="Add Appointment" textFill="#180746">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="83.0" layoutY="105.0" prefHeight="482.0" prefWidth="422.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="78.79996337890626" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="10.0" prefWidth="159.60003662109375" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="55.60001220703125" minHeight="10.0" prefHeight="34.8000244140625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="106.79999389648438" minHeight="10.0" prefHeight="30.79998779296875" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="141.20001220703125" minHeight="10.0" prefHeight="98.39998779296874" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="85.00000610351563" minHeight="10.0" prefHeight="40.19999999999999" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="67.39999999999998" minHeight="10.0" prefHeight="37.60003662109375" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="60.79996337890623" minHeight="10.0" prefHeight="36.79999999999998" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="60.79996337890623" minHeight="10.0" prefHeight="36.79999999999998" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="54.39999999999998" minHeight="10.0" prefHeight="54.39999999999998" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="54.39999999999998" minHeight="10.0" prefHeight="54.39999999999998" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Customer" />
+            <Label text="Title" GridPane.rowIndex="1" />
+            <Label text="Description" GridPane.rowIndex="2" />
+            <Label text="Contact" GridPane.rowIndex="4" />
+            <Label text="Location" GridPane.rowIndex="3" />
+            <TextField fx:id="titleField" prefHeight="28.0" prefWidth="223.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="descriptionField" prefHeight="67.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="contactField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="locationField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Type" GridPane.rowIndex="5" />
+            <TextField fx:id="typeField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Start" GridPane.rowIndex="7" />
+            <ComboBox fx:id="selectCustomer" prefHeight="26.0" prefWidth="162.0" promptText="Select Customer" GridPane.columnIndex="1" />
+            <Label text="End" GridPane.rowIndex="8" />
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <children>
+                  <Spinner fx:id="startHour" editable="true" onKeyReleased="#updateSpinner" prefHeight="26.0" prefWidth="120.0" />
+                  <Spinner fx:id="startMinute" editable="true" onKeyReleased="#updateSpinner" onMouseClicked="#updateSpinner" prefHeight="26.0" prefWidth="128.0" />
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <RadioButton fx:id="startAM" mnemonicParsing="false" selected="true" text="AM">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="startToggle" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="startPM" mnemonicParsing="false" text="PM" toggleGroup="$startToggle" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <children>
+                  <Spinner fx:id="endHour" editable="true" onKeyReleased="#updateSpinner" prefHeight="26.0" prefWidth="122.0" />
+                  <Spinner fx:id="endMinute" editable="true" onKeyReleased="#updateSpinner" onMouseClicked="#updateSpinner" prefHeight="26.0" prefWidth="124.0" />
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <RadioButton fx:id="endAM" mnemonicParsing="false" selected="true" text="AM">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="endToggle" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="endPM" mnemonicParsing="false" text="PM" toggleGroup="$endToggle" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label text="URL" GridPane.rowIndex="6" />
+            <TextField fx:id="urlField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

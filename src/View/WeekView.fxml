@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.WeekViewController">
+   <children>
+      <Label fx:id="weekLabel" layoutX="244.0" layoutY="44.0" text="Week of">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <VBox layoutX="61.0" layoutY="99.0" prefHeight="485.0" prefWidth="630.0">
+         <children>
+            <TitledPane fx:id="sunday" collapsible="false" onMouseClicked="#selectBox" prefHeight="200.0" prefWidth="200.0" text="Sunday" />
+            <TitledPane fx:id="monday" collapsible="false" onMouseClicked="#selectBox" prefHeight="200.0" prefWidth="200.0" text="Monday" />
+            <TitledPane fx:id="tuesday" collapsible="false" onMouseClicked="#selectBox" prefHeight="200.0" prefWidth="200.0" text="Tuesday" />
+            <TitledPane fx:id="wednesday" collapsible="false" onMouseClicked="#selectBox" prefHeight="200.0" prefWidth="200.0" text="Wednesday" />
+            <TitledPane fx:id="thursday" collapsible="false" onMouseClicked="#selectBox" prefHeight="200.0" prefWidth="200.0" text="Thursday" />
+            <TitledPane fx:id="friday" collapsible="false" onMouseClicked="#selectBox" prefHeight="200.0" prefWidth="200.0" text="Friday" />
+            <TitledPane fx:id="saturday" collapsible="false" onMouseClicked="#selectBox" prefHeight="200.0" prefWidth="200.0" text="Saturday" />
+         </children>
+      </VBox>
+      <Button fx:id="previousWeek" layoutX="61.0" layoutY="611.0" mnemonicParsing="false" onMouseClicked="#previousWeek" text="&lt;-" />
+      <Button fx:id="nextWeek" layoutX="661.0" layoutY="611.0" mnemonicParsing="false" onMouseClicked="#nextWeek" text="-&gt;" />
+   </children>
+</AnchorPane>
